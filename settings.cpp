@@ -242,7 +242,13 @@ void Settings::save()
 void Settings::restore()
 {
     QSettings settings("subrender", "subrender");
-    if (settings.isWritable() == false) {
+    //Check for some keys to make sure that the config is valid/exists
+    if ((settings.contains("path/pen")
+            && settings.contains("text/color")
+            && settings.contains("text/font")
+            && settings.contains("position/time")
+            && settings.contains("position/depth")
+            && settings.contains("background/color")) == false) {
         loadDefault();
         return;
     }
