@@ -252,7 +252,7 @@ void MainWindow::graphColorChanged(QColor color)
 
 void MainWindow::on_indicatorStartColorButton_clicked()
 {
-    m_indicatorStartColorDialog->setCurrentColor(Settings::instance()->getIndicatorStopColor());
+    m_indicatorStartColorDialog->setCurrentColor(Settings::instance()->getIndicatorStartColor());
     m_indicatorStartColorDialog->show();
 }
 
