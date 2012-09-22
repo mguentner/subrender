@@ -41,6 +41,7 @@ void DiveRenderer::render()
     quint16 width = Settings::instance()->getWidth();
     quint16 height = Settings::instance()->getHeight();
     quint32 frame = 0;
+    quint32 fpsCounter = 0;
     quint32 totalFrames = DiveManager::instance()->getDive(m_dive).getDuration()*fps;
     DiveRenderWorker worker;
     for (quint32 i = 0; i < DiveManager::instance()->getDive(m_dive).getDuration()*1000; i = i+1000/fps) {
@@ -54,6 +55,11 @@ void DiveRenderer::render()
         image.save(m_path + "/subrender-dive" + QString::number(m_dive) + "-frame-" + QString::number(frame) + ".png", "PNG");
         emit renderProgress(frame, totalFrames);
         frame++;
+        fpsCounter++;
+        if (fpsCounter == fps) {
+            i += 1000%fps;
+            fpsCounter = 0;
+        }
     }
     emit finished(false);
 }
