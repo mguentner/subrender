@@ -206,7 +206,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="145"/>
         <source>XML Files (*.xmi, *.xml)</source>
-        <translation>XML Dateien (*.xmi, *xml)</translation>
+        <translation>XML Dateien (*.xmi, *.xml)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="150"/>
