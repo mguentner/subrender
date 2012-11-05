@@ -1,0 +1,25 @@
+1 VERSIONINFO
+FILEVERSION     0,2,0,0
+PRODUCTVERSION  0,2,0,0
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName", "sourcediver.org"
+      VALUE "FileDescription", "subrender"
+      VALUE "FileVersion", "0.2"
+      VALUE "InternalName", "subrender"
+      VALUE "LegalCopyright", "Maximilian Güntner"
+      VALUE "OriginalFilename", "subrender.exe"
+      VALUE "ProductName", "subsurface"
+      VALUE "ProductVersion", "0.2"
+    END
+  END
+
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x409, 1252
+  END
+END
+ID ICON "subrender.ico"
