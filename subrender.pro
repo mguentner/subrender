@@ -55,5 +55,9 @@ unix {
     INSTALLS += target
 }
 
+win32 {
+    RC_FILE = packaging/windows/subrender.rc
+}
+
 RESOURCES += \
     subrender.qrc
