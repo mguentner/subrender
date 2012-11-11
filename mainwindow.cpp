@@ -379,7 +379,7 @@ void MainWindow::on_actionAbout_triggered()
     QString head;
     QString text;
     text = trUtf8("Copyright 2012<br /> Maximilian Güntner &lt;maximilian.guentner@gmail.com&gt;<br />Released under the terms of the GPLv3.");
-    head = tr("<h2><b>Subrender %1</b></h2>").arg(QString::number(SUBRENDER_VERSION, 'f', 1));
+    head = tr("<h2><b>Subrender %1</b></h2>").arg(QString(SUBRENDER_VERSION));
     QMessageBox::about(this, tr("About subrender"), head + text );
 }
 
