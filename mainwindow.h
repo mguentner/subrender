@@ -102,6 +102,10 @@ private slots:
 
     void on_actionAbout_triggered();
 
+    void on_smoothnessSlider_sliderReleased();
+
+    void on_plotStyleComboBox_currentIndexChanged(int index);
+
 private:
     Ui::MainWindow *ui;
     /* Dialogs */

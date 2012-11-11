@@ -132,6 +132,7 @@ void MainWindow::updateElements()
     ui->fontLineEdit->setText(Settings::instance()->getTextFont().family()
                               + ", "
                               + QString::number(Settings::instance()->getTextFont().pointSizeF()));
+    ui->smoothnessSlider->setValue(Settings::instance()->getSmoothness());
     /* Be safe and block these two spinboxes */
     ui->graphWidthSpinBox->blockSignals(true);
     ui->radiusSpinBox->blockSignals(true);
@@ -139,6 +140,8 @@ void MainWindow::updateElements()
     ui->radiusSpinBox->setValue(Settings::instance()->getIndicatorRadius());
     ui->graphWidthSpinBox->blockSignals(false);
     ui->radiusSpinBox->blockSignals(false);
+    ui->plotStyleComboBox->setCurrentIndex(
+                ui->plotStyleComboBox->findData(Settings::instance()->getPlotStyle()));
     if (DiveManager::instance()->empty()) {
         ui->selectDiveButton->setEnabled(false);
     } else {
@@ -150,6 +153,10 @@ void MainWindow::updateElements()
     } else {
         ui->renderButton->setEnabled(false);
     }
+    if (Settings::instance()->getPlotStyle() == Settings::Vertical)
+        ui->smoothnessSlider->setEnabled(false);
+    else if (Settings::instance()->getPlotStyle() == Settings::HorizontalVertical)
+        ui->smoothnessSlider->setEnabled(true);
 }
 
 void MainWindow::setupElements()
@@ -160,6 +167,8 @@ void MainWindow::setupElements()
     ui->actionQuit->setIcon(style.standardIcon(QStyle::SP_MessageBoxCritical));
     ui->selectDiveButton->setIcon(style.standardIcon(QStyle::SP_FileDialogListView));
     ui->actionAbout->setIcon(style.standardIcon(QStyle::SP_MessageBoxInformation));
+    ui->plotStyleComboBox->addItem(tr("Vertical"), Settings::Vertical);
+    ui->plotStyleComboBox->addItem(tr("Horizontal+Vertical"), Settings::HorizontalVertical);
     this->setWindowIcon(QIcon(":/icons/subrender.png"));
 }
 
@@ -372,4 +381,15 @@ void MainWindow::on_actionAbout_triggered()
     text = trUtf8("Copyright 2012<br /> Maximilian Güntner &lt;maximilian.guentner@gmail.com&gt;<br />Released under the terms of the GPLv3.");
     head = tr("<h2><b>Subrender %1</b></h2>").arg(QString::number(SUBRENDER_VERSION, 'f', 1));
     QMessageBox::about(this, tr("About subrender"), head + text );
+}
+
+void MainWindow::on_smoothnessSlider_sliderReleased()
+{
+    Settings::instance()->setSmoothness(ui->smoothnessSlider->value());
+}
+
+void MainWindow::on_plotStyleComboBox_currentIndexChanged(int index)
+{
+    Settings::instance()->setPlotStyle((Settings::PlotStyle) ui->plotStyleComboBox->itemData(index).toUInt());
+    updateElements();
 }
