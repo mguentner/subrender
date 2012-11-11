@@ -64,102 +64,112 @@
         <translation>Breite</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="206"/>
+        <location filename="../mainwindow.ui" line="205"/>
+        <source>Smoothness</source>
+        <translation>Glättung</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="234"/>
+        <source>Style</source>
+        <translation>Stil</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="257"/>
         <source>Background</source>
         <translation>Hintergrund</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="229"/>
+        <location filename="../mainwindow.ui" line="280"/>
         <source>Indicator</source>
         <translation>Markierung</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="244"/>
+        <location filename="../mainwindow.ui" line="295"/>
         <source>Start</source>
         <translation>Start</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="254"/>
+        <location filename="../mainwindow.ui" line="305"/>
         <source>Stop</source>
         <translation>Stop</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="278"/>
+        <location filename="../mainwindow.ui" line="329"/>
         <source>Size</source>
         <translation>Größe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="298"/>
+        <location filename="../mainwindow.ui" line="349"/>
         <source>Positions</source>
         <translation>Positionen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="313"/>
+        <location filename="../mainwindow.ui" line="364"/>
         <source>Time</source>
         <translation>Zeit</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="320"/>
+        <location filename="../mainwindow.ui" line="371"/>
         <source>Depth</source>
         <translation>Tiefe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="340"/>
+        <location filename="../mainwindow.ui" line="391"/>
         <source>Dive</source>
         <translation>Tauchgang</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="350"/>
+        <location filename="../mainwindow.ui" line="401"/>
         <source>Select</source>
         <translation>Wähle</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="366"/>
+        <location filename="../mainwindow.ui" line="417"/>
         <source>Render...</source>
         <translation>Rendern...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="381"/>
+        <location filename="../mainwindow.ui" line="432"/>
         <source>File</source>
         <translation>Datei</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="389"/>
+        <location filename="../mainwindow.ui" line="440"/>
         <source>Advanced</source>
         <translation>Erweitert</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="395"/>
+        <location filename="../mainwindow.ui" line="446"/>
         <source>Help</source>
         <translation>Hilfe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="407"/>
+        <location filename="../mainwindow.ui" line="458"/>
         <source>Open</source>
         <translation>Öffnen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="412"/>
+        <location filename="../mainwindow.ui" line="463"/>
         <source>Quit</source>
         <translation>Schließen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="417"/>
+        <location filename="../mainwindow.ui" line="468"/>
         <source>Render Settings</source>
         <translation>Render Einstellungen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="422"/>
+        <location filename="../mainwindow.ui" line="473"/>
         <source>Default Settings</source>
         <translation>Standard Einstellungen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="427"/>
+        <location filename="../mainwindow.ui" line="478"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="432"/>
+        <location filename="../mainwindow.ui" line="483"/>
         <source>About Qt</source>
         <translation>Über Qt</translation>
     </message>
@@ -199,7 +209,17 @@
         <translation>Tiefen Position festlegen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="168"/>
+        <location filename="../mainwindow.cpp" line="170"/>
+        <source>Vertical</source>
+        <translation>Vertikal</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="171"/>
+        <source>Horizontal+Vertical</source>
+        <translation>Horizontal und Vertikal</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="177"/>
         <source>Open subsurface log</source>
         <translation>Öffne subsurface log</translation>
     </message>
@@ -208,27 +228,27 @@
         <translation type="obsolete">XML Dateien (*.xmi, *.xml)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="168"/>
+        <location filename="../mainwindow.cpp" line="177"/>
         <source>XML Files (*.xmi *.xml)</source>
         <translation>XML Dateien (*.xmi *.xml)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="173"/>
+        <location filename="../mainwindow.cpp" line="182"/>
         <source>Error</source>
         <translation>Fehler</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="173"/>
+        <location filename="../mainwindow.cpp" line="182"/>
         <source>Unable to open %1</source>
         <translation>Konnte %1 nicht öffnen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="181"/>
+        <location filename="../mainwindow.cpp" line="190"/>
         <source>Import successful</source>
         <translation>Import erfolgreich</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="182"/>
+        <location filename="../mainwindow.cpp" line="191"/>
         <source>%n dive(s) have been imported.
 You can now select a dive.</source>
         <translation>
@@ -239,49 +259,49 @@ Sie können nun einen Tauchgang auswählen.</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="184"/>
+        <location filename="../mainwindow.cpp" line="193"/>
         <source>Import failed</source>
         <translation>Import fehlgeschlagen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="185"/>
+        <location filename="../mainwindow.cpp" line="194"/>
         <source>No dive has been imported.
 Please check your file and try again.</source>
         <translation>Kein Tauchgang wurde importiert.
 Bitte überprüfen Sie die Datei und versuchen Sie es erneut.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="219"/>
+        <location filename="../mainwindow.cpp" line="228"/>
         <source>Warning</source>
         <translation>Warnung</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="219"/>
+        <location filename="../mainwindow.cpp" line="228"/>
         <source>Please select a dive first</source>
         <translation>Bitte wählen Sie zuerst einen Tauchgang</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="355"/>
+        <location filename="../mainwindow.cpp" line="364"/>
         <source>Restore default settings</source>
         <translation>Standardeinstellungen wiederherstellen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="356"/>
+        <location filename="../mainwindow.cpp" line="365"/>
         <source>This will restore the default settings. All current settings will be lost!</source>
         <translation>Dies wird die Standardeinstellungen wiederherstellen. Alle bisherige Einstellungen gehen verloren!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="372"/>
+        <location filename="../mainwindow.cpp" line="381"/>
         <source>Copyright 2012&lt;br /&gt; Maximilian Güntner &amp;lt;maximilian.guentner@gmail.com&amp;gt;&lt;br /&gt;Released under the terms of the GPLv3.</source>
         <translation>Copyright 2012&lt;br /&gt; Maximilian Güntner &amp;lt;maximilian.guentner@gmail.com&amp;gt;&lt;br /&gt;Veröffentlicht unter der GPLv3.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="373"/>
+        <location filename="../mainwindow.cpp" line="382"/>
         <source>&lt;h2&gt;&lt;b&gt;Subrender %1&lt;/b&gt;&lt;/h2&gt;</source>
         <translation>&lt;h2&gt;&lt;b&gt;Subrender %1&lt;/b&gt;&lt;/h2&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="374"/>
+        <location filename="../mainwindow.cpp" line="383"/>
         <source>About subrender</source>
         <translation>Über subrender</translation>
     </message>
@@ -294,17 +314,17 @@ Bitte überprüfen Sie die Datei und versuchen Sie es erneut.</translation>
         <translation>Koordinaten ändern</translation>
     </message>
     <message>
-        <location filename="../positiondialog.ui" line="41"/>
+        <location filename="../positiondialog.ui" line="192"/>
         <source>Center</source>
         <translation>Zentrieren</translation>
     </message>
     <message>
-        <location filename="../positiondialog.ui" line="79"/>
+        <location filename="../positiondialog.ui" line="152"/>
         <source>X</source>
         <translation>X</translation>
     </message>
     <message>
-        <location filename="../positiondialog.ui" line="89"/>
+        <location filename="../positiondialog.ui" line="162"/>
         <source>Y</source>
         <translation>Y</translation>
     </message>
