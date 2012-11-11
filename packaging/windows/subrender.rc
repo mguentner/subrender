@@ -1,6 +1,6 @@
 1 VERSIONINFO
-FILEVERSION     0,2,0,0
-PRODUCTVERSION  0,2,0,0
+FILEVERSION     0,3,0,0
+PRODUCTVERSION  0,3,0,0
 BEGIN
   BLOCK "StringFileInfo"
   BEGIN
@@ -8,12 +8,12 @@ BEGIN
     BEGIN
       VALUE "CompanyName", "sourcediver.org"
       VALUE "FileDescription", "subrender"
-      VALUE "FileVersion", "0.2"
+      VALUE "FileVersion", "0.3"
       VALUE "InternalName", "subrender"
       VALUE "LegalCopyright", "Maximilian Güntner"
       VALUE "OriginalFilename", "subrender.exe"
       VALUE "ProductName", "subsurface"
-      VALUE "ProductVersion", "0.2"
+      VALUE "ProductVersion", "0.3"
     END
   END
 

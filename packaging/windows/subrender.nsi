@@ -17,10 +17,10 @@
 # General
 
     # Program version
-    !define SUBRENDER_VERSION "0.2.0"
+    !define SUBRENDER_VERSION "0.3.0"
 
     # VIProductVersion requires version in x.x.x.x format
-    !define SUBRENDER_VIPRODUCTVERSION "0.2.0.0"
+    !define SUBRENDER_VIPRODUCTVERSION "0.3.0.0"
 
     # Installer name and filename
     Name "Subrender"
