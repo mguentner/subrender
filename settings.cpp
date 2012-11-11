@@ -271,44 +271,53 @@ void Settings::save()
 void Settings::restore()
 {
     QSettings settings("subrender", "subrender");
-    //Check for some keys to make sure that the config is valid/exists
-    if ((settings.contains("path/pen")
-            && settings.contains("text/color")
-            && settings.contains("text/font")
-            && settings.contains("position/time")
-            && settings.contains("position/depth")
-            && settings.contains("background/color")) == false) {
-        loadDefault();
-        return;
-    }
+    /* First, initialize all variables with the default settings and then overwrite
+     * them if they exist in the config file / registry */
+    loadDefault();   
     settings.beginGroup("path");
-    m_pathPen = settings.value("pen").value<QPen>();
+    if (settings.contains("pen"))
+        m_pathPen = settings.value("pen").value<QPen>();
+    if (settings.contains("smoothness"))
+        m_smoothness = settings.value("smoothness").value<quint16>();
+    if (settings.contains("style"))
+        m_plotStyle = (Settings::PlotStyle) settings.value("style").toUInt();
     settings.endGroup();
 
     settings.beginGroup("text");
-    m_textColor = settings.value("color").value<QColor>();
-    m_textFont = settings.value("font").value<QFont>();
+    if (settings.contains("color"))
+        m_textColor = settings.value("color").value<QColor>();
+    if (settings.contains("font"))
+        m_textFont = settings.value("font").value<QFont>();
     settings.endGroup();
 
     settings.beginGroup("position");
-    m_timePosition = settings.value("time").toPointF();
-    m_depthPosition = settings.value("depth").toPointF();
+    if (settings.contains("time"))
+        m_timePosition = settings.value("time").toPointF();
+    if (settings.contains("depth"))
+        m_depthPosition = settings.value("depth").toPointF();
     settings.endGroup();
 
     settings.beginGroup("background");
-    m_backgroundColor = settings.value("color").value<QColor>();
+    if (settings.contains("color"))
+        m_backgroundColor = settings.value("color").value<QColor>();
     settings.endGroup();
 
     settings.beginGroup("indicator");
-    m_indicatorStartColor = settings.value("startColor").value<QColor>();
-    m_indicatorStopColor = settings.value("stopColor").value<QColor>();
-    m_indicatorRadius = settings.value("radius").toDouble();
+    if (settings.contains("startColor"))
+        m_indicatorStartColor = settings.value("startColor").value<QColor>();
+    if (settings.contains("stopColor"))
+        m_indicatorStopColor = settings.value("stopColor").value<QColor>();
+    if (settings.contains("radius"))
+        m_indicatorRadius = settings.value("radius").toDouble();
     settings.endGroup();
 
     settings.beginGroup("image");
-    m_width = settings.value("width").toUInt();
-    m_height = settings.value("height").toUInt();
-    m_fps = settings.value("fps").toUInt();
+    if (settings.contains("width"))
+        m_width = settings.value("width").toUInt();
+    if (settings.contains("height"))
+        m_height = settings.value("height").toUInt();
+    if (settings.contains("fps"))
+        m_fps = settings.value("fps").toUInt();
     settings.endGroup();
 }
 
