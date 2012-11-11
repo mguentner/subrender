@@ -35,6 +35,8 @@ public:
     /* Path settings */
     QPen getPathPen();
     void setPathPen(const QPen &pathPen);
+    quint16 getSmoothness();
+    void setSmoothness(quint16 smoothness);
     /* Text settings */
     QColor getTextColor();
     void setTextColor(const QColor &textColor);
@@ -77,6 +79,7 @@ private:
     static Settings* m_instance;
     /* Path settings */
     QPen m_pathPen;
+    quint16 m_smoothness;
     /* Text settings */
     QColor m_textColor;
     QFont  m_textFont;

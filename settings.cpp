@@ -48,6 +48,18 @@ void Settings::setPathPen(const QPen &pathPen)
     }
 }
 
+quint16 Settings::getSmoothness()
+{
+    return m_smoothness;
+}
+
+void Settings::setSmoothness(quint16 smoothness)
+{
+    if (m_smoothness != smoothness) {
+        m_smoothness = smoothness;
+        emit settingsChanged();
+    }
+}
 QColor Settings::getTextColor()
 {
     return m_textColor;
@@ -209,6 +221,7 @@ void Settings::save()
 
     settings.beginGroup("path");
     settings.setValue("pen", m_pathPen);
+    settings.setValue("smoothness", m_smoothness);
     settings.endGroup();
 
     settings.beginGroup("text");
@@ -293,6 +306,7 @@ void Settings::loadDefault()
     m_indicatorStopColor = QColor("#520000");
     m_indicatorRadius = 12;
     m_fps = 15;
+    m_smoothness = 15;
     m_width = 400;
     m_height = 720;
     m_depthPosition = QPointF(m_width*0.70, m_height*0.90);
