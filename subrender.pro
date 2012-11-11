@@ -37,7 +37,8 @@ HEADERS  += mainwindow.h \
     positiondialog.h \
     diveselectiondialog.h \
     rendersettingsdialog.h \
-    renderprogressdialog.h
+    renderprogressdialog.h \
+    geometry.h
 
 FORMS    += mainwindow.ui \
     positiondialog.ui \
