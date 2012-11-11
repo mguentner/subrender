@@ -31,12 +31,16 @@ class Settings : public QObject
 {
     Q_OBJECT
 public:
+    enum PlotStyle {HorizontalVertical = 0, Vertical = 1};
+
     static Settings* instance();
     /* Path settings */
     QPen getPathPen();
     void setPathPen(const QPen &pathPen);
     quint16 getSmoothness();
     void setSmoothness(quint16 smoothness);
+    PlotStyle getPlotStyle();
+    void setPlotStyle(PlotStyle plotStyle);
     /* Text settings */
     QColor getTextColor();
     void setTextColor(const QColor &textColor);
@@ -80,6 +84,7 @@ private:
     /* Path settings */
     QPen m_pathPen;
     quint16 m_smoothness;
+    PlotStyle m_plotStyle;
     /* Text settings */
     QColor m_textColor;
     QFont  m_textFont;

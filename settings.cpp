@@ -60,6 +60,21 @@ void Settings::setSmoothness(quint16 smoothness)
         emit settingsChanged();
     }
 }
+
+
+void Settings::setPlotStyle(Settings::PlotStyle plotStyle)
+{
+    if (m_plotStyle != plotStyle) {
+        m_plotStyle = plotStyle;
+        emit settingsChanged();
+    }
+}
+
+Settings::PlotStyle Settings::getPlotStyle()
+{
+    return m_plotStyle;
+}
+
 QColor Settings::getTextColor()
 {
     return m_textColor;
@@ -222,6 +237,7 @@ void Settings::save()
     settings.beginGroup("path");
     settings.setValue("pen", m_pathPen);
     settings.setValue("smoothness", m_smoothness);
+    settings.setValue("style", m_plotStyle);
     settings.endGroup();
 
     settings.beginGroup("text");
@@ -312,4 +328,5 @@ void Settings::loadDefault()
     m_depthPosition = QPointF(m_width*0.70, m_height*0.90);
     m_timePosition = QPointF(m_width*0.20, m_height*0.90);
     m_selectedDive = 1;
+    m_plotStyle = Settings::HorizontalVertical;
 }
