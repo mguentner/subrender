@@ -29,7 +29,7 @@
 #include <diveselectiondialog.h>
 #include <divemanager.h>
 
-#define SUBRENDER_VERSION "0.3-rc1"
+#define SUBRENDER_VERSION "0.3"
 
 namespace Ui {
 class MainWindow;
