@@ -97,7 +97,7 @@ Sample Dive::getSampleByTime(quint64 time)
     second = m_samples[lastKnown];
     factor = calculateFactor(first.getTime(),second.getTime(),time);
 
-    temperature = (1-factor)*first.getTemperature()+factor*first.getTemperature();
+    temperature = (1-factor)*first.getTemperature()+factor*second.getTemperature();
 
     newSample.setTime(time);
     newSample.setTemperature(temperature);
