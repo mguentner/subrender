@@ -24,7 +24,7 @@
 #include <QIODevice>
 #include <sample.h>
 #include <dive.h>
-#include <QtXml/QXmlStreamReader>
+#include <QXmlStreamReader>
 #include <QStringList>
 
 class DiveManager

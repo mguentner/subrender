@@ -174,7 +174,7 @@ void MainWindow::setupElements()
 
 void MainWindow::on_actionOpen_triggered()
 {
-    QString filename = QFileDialog::getOpenFileName(this, tr("Open subsurface log"), QString(), tr("XML Files (*.xmi *.xml)"));
+    QString filename = QFileDialog::getOpenFileName(this, tr("Open subsurface log"), QString(), tr("XML Files (*.xmi *.xml *.ssrf)"));
     if (filename == "")
         return;
     QFile file(filename);
